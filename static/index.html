@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Cuota Mensual</title>
+    <script type="module" src="./scripts/main.js"></script>
+    <link rel="stylesheet" href="./st.css" >
+  </head>
+  <body>
+    <div>
+      <form method = "post" id="main" action="/calculaIMC" enctype="application/x-www-form-urlencoded" method="post">
+        <div>
+          <h1>Nombre:</h1>
+          <input id="nombre" placeholder="                 Nombre"  name="accion" value="nombre"/>
+        </div>
+        <div>
+          <h1>Préstamo:</h1>
+          <input id="prestamo" placeholder="                     $"name="accion" value="prestamo" />
+        </div>
+        <div>
+          <h1>Meses:</h1>
+          <input id="meses" name="accion" value="meses"/>
+        </div>
+        <div>
+          <h1>Interés:</h1>
+          <input id="interes" placeholder="                   0.5%" name="accion" value="interes"/>
+          <br />
+          <br />
+        </div>
+        <div>
+          <textarea id="resultado" readonly>
+            Aquí aparecerá tu petición</textarea>
+            <br/><br/>
+          <button id="enviar" type="submit">Enviar!</button>
+        </div>
+    </form>
+    </div>
+  </body>
+</html>
+
+
+        <!-- <div>
+          <button id="desplegarTodos">Desplegar Todos</button>
+        </div> -->
+      
+      <!-- <fieldset>
+        <div>
+          <label>Indique la opción que quiera enviar:</label>
+          <select id="combo">
+            <option value="req1">Sumatoria de Cuotas</option>
+            <option value="req2">¿Quiénes tienen la cuota máyor a 30k?</option>
+            <option value="req3">¿Cuántos pagan en menos de un año?</option>
+            <option value="req4">
+              ¿Quién fue el primero en tener un préstamo de 500k?
+            </option>
+            <option value="req5">¿Quién tiene un interés bajito? (2%)</option>
+            <option value="req6">Aumentarle 90k a cada cuota :)</option>
+            <option value="req7">Decrementarle 90k a cada cuota :(</option>
+            <option value="req8">Cuotas de Todos</option>
+          </select>
+        </div>
+      </fieldset> -->
