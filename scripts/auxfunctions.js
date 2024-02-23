@@ -1,7 +1,10 @@
-function calcularCuotaMensual(prestamo, i, n) {
-  let aux = Math.pow(1 + i, n);
-  let cuota = prestamo * ((aux * i) / (aux - 1));
+function calcularCuotaMensual(prestamo, interesMensual, meses) {
+
+  interesMensual = interesMensual / 100;
+
+  let aux = Math.pow(1 + interesMensual, meses);
+  let cuota = prestamo * ((aux * interesMensual) / (aux - 1));
   return Math.round(cuota);
 }
 
-export { calcularCuotaMensual };
+module.exports={calcularCuotaMensual}
