@@ -20,17 +20,16 @@ app.get("/calculaIMC",(req,res)=>{
 
 app.post("/calculaIMC",(req,res)=>{
     const transaccion = req.body
-
-  console.log(req.body+"\n")
     
     const nombre = transaccion.nombre;
     const prestamo = parseFloat(transaccion.prestamo);
     const interes = parseFloat(transaccion.interes);
     const meses = parseInt(transaccion.meses);
 
-    let cuota = funciones.calcularCuotaMensual(prestamo,interes,meses)
-    console.log(cuota)
+    if (transaccion.nombre!=NaN && transaccion.prestamo != NaN && transaccion.interes!=NaN && transaccion.meses!= NaN){
 
+    let cuota = funciones.calcularCuotaMensual(prestamo,interes,meses)
+    res.send(funciones.subirHTML(nombre,prestamo,interes,meses,cuota))}
 
 })
 

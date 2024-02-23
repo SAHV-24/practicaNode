@@ -9,6 +9,7 @@
   </head>
   <body>
     <div>
+      <fieldset>
       <form method = "post" id="main" action="/calculaIMC" enctype="application/x-www-form-urlencoded">
         <div>
           <h1>Nombre:</h1>
@@ -24,40 +25,17 @@
         </div>
         <div>
           <h1>Interés:</h1>
-          <input id="interes" placeholder="0.5%" name="interes"/>
+          <input id="interes" placeholder="5%" name="interes"/>
           <br />
           <br />
         </div>
         <div>
-          <textarea id="resultado" readonly>
-            Aquí aparecerá tu petición</textarea>
+          <textarea id="resultado" readonly cols="50" > Aquí aparecerá tu petición</textarea>
             <br/><br/>
         </div>
         <button id="enviar" type="submit">Enviar!</button>
     </form>
+  </fieldset>
     </div>
   </body>
 </html>
-
-
-        <!-- <div>
-          <button id="desplegarTodos">Desplegar Todos</button>
-        </div> -->
-      
-      <!-- <fieldset>
-        <div>
-          <label>Indique la opción que quiera enviar:</label>
-          <select id="combo">
-            <option value="req1">Sumatoria de Cuotas</option>
-            <option value="req2">¿Quiénes tienen la cuota máyor a 30k?</option>
-            <option value="req3">¿Cuántos pagan en menos de un año?</option>
-            <option value="req4">
-              ¿Quién fue el primero en tener un préstamo de 500k?
-            </option>
-            <option value="req5">¿Quién tiene un interés bajito? (2%)</option>
-            <option value="req6">Aumentarle 90k a cada cuota :)</option>
-            <option value="req7">Decrementarle 90k a cada cuota :(</option>
-            <option value="req8">Cuotas de Todos</option>
-          </select>
-        </div>
-      </fieldset> -->
