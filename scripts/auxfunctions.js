@@ -11,7 +11,7 @@ module.exports = {
     return `<!DOCTYPE html>
     <html
       lang="en"
-      class="bg-gradient-to-tr from-sky-600 to-[#23304c] w-full h-full"
+      class="bg-gradient-to-tr from-sky-400 to-[#23304c] w-full h-full"
     >
       <head>
         <meta charset="UTF-8" />
