@@ -9,7 +9,10 @@ module.exports = {
 
   subirHTML: function (nombre, prestamo, meses, interes, cuota) {
     return `<!DOCTYPE html>
-    <html lang="en">
+    <html
+      lang="en"
+      class="bg-gradient-to-tr from-sky-600 to-[#23304c] w-full h-full"
+    >
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,88 +26,88 @@ module.exports = {
           rel="stylesheet"
         />
       </head>
-      <body class="bg-gradient-to-tr from-sky-600 to-[#23304c]">
-        <form
-          method="post"
-          id="main"
-          action="/calculaIMC"
-          enctype="application/x-www-form-urlencoded"
-          class="flex flex-col"
-        >
-          <div class="flex flex-col text-center round p-3 font-[Poppins]">
-            <div>
-              <h1
-                class="text-4xl font-bold bg-gradient-to-r py-2 from-sky-600 to-slate-400 bg-clip-text text-transparent"
-              >
-                Calculadora de Cuota Mensual
-              </h1>
-            </div>
-            <div class="">
-              <h1 class="text-white py-2 font-bold">Nombre</h1>
-              <input
-                id="nombre"
-                class="rounded-lg shadow-inner shadow-slate-900 h-8 placeholder:italic placeholder:text-center place text-center"
-                placeholder="Sergio"
-                name="nombre"
-                autocomplete="off"
-              />
-            </div>
-            <div>
-              <h1 class="text-white py-2 font-bold">Préstamo</h1>
-              <input
-                id="prestamo"
-                placeholder="$"
-                name="prestamo"
-                class="rounded-lg shadow-inner shadow-slate-900 h-8 placeholder:italic placeholder:text-center text-center"
-                autocomplete="off"
-              />
-            </div>
-            <div>
-              <h1 class="text-white py-2 font-bold">Meses</h1>
-              <input
-                id="meses"
-                name="meses"
-                placeholder="5 meses"
-                class="rounded-lg shadow-inner shadow-slate-900 h-8 placeholder:italic placeholder:text-center text-center"
-                autocomplete="off"
-              />
-            </div>
-            <div>
-              <h1 class="text-white py-2 font-bold">Interés</h1>
-              <input
-                id="interes"
-                placeholder="5%"
-                name="interes"
-                class="rounded-lg shadow-inner shadow-slate-900 h-8 placeholder:italic placeholder:text-center text-center"
-                autocomplete="off"
-              />
-            </div>
-    
-            <div class="py-5">
-              <div class="pb-2">
-                <button
-                  class="rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white h-10 w-40 hover:scale-110 hover:duration-300 font-semibold"
-                  id="enviar"
-                  type="submit"
+      <body>
+        <div>
+          <form
+            method="post"
+            id="main"
+            action="/calculaIMC"
+            enctype="application/x-www-form-urlencoded"
+            class="flex flex-col"
+          >
+            <div class="flex flex-col text-center round p-3 font-[Poppins]">
+              <div>
+                <h1
+                  class="text-4xl font-bold bg-gradient-to-r py-2 from-sky-400 to-slate-300 bg-clip-text text-transparent"
                 >
-                  Enviar!
-                </button>
+                  Calculadora de Cuota Mensual
+                </h1>
               </div>
-              <textarea
-                id="resultado"
-                readonly
-                class="rounded-lg shadow-inner shadow-slate-900 w-[500px] mt-3 h-[200px]"
-              >
-
-              El cliente: ${nombre} 
-              pidió un préstamo de: $${prestamo} pesos
-              con un interés del ${interes}% durante ${meses} meses. 
-              Su cuota: $${cuota} pesos
-              
-              </textarea>
+              <div class="">
+                <h1 class="text-white py-2 font-bold">Nombre</h1>
+                <input
+                  id="nombre"
+                  class="rounded-lg shadow-inner shadow-slate-900 h-8 placeholder:italic placeholder:text-center place text-center"
+                  placeholder="Sergio"
+                  name="nombre"
+                  autocomplete="off"
+                />
+              </div>
+              <div>
+                <h1 class="text-white py-2 font-bold">Préstamo</h1>
+                <input
+                  id="prestamo"
+                  placeholder="$"
+                  name="prestamo"
+                  class="rounded-lg shadow-inner shadow-slate-900 h-8 placeholder:italic placeholder:text-center text-center"
+                  autocomplete="off"
+                />
+              </div>
+              <div>
+                <h1 class="text-white py-2 font-bold">Meses</h1>
+                <input
+                  id="meses"
+                  name="meses"
+                  placeholder="5 meses"
+                  class="rounded-lg shadow-inner shadow-slate-900 h-8 placeholder:italic placeholder:text-center text-center"
+                  autocomplete="off"
+                />
+              </div>
+              <div>
+                <h1 class="text-white py-2 font-bold">Interés</h1>
+                <input
+                  id="interes"
+                  placeholder="5%"
+                  name="interes"
+                  class="rounded-lg shadow-inner shadow-slate-900 h-8 placeholder:italic placeholder:text-center text-center"
+                  autocomplete="off"
+                />
+              </div>
+    
+              <div class="py-5">
+                <div class="pb-2">
+                  <button
+                    class="rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white h-10 w-40 hover:scale-110 hover:duration-300 font-semibold"
+                    id="enviar"
+                    type="submit"
+                  >
+                    Enviar!
+                  </button>
+                </div>
+                <textarea
+                  id="resultado"
+                  readonly
+                  class="rounded-lg shadow-inner shadow-slate-900 w-[500px] mt-3 h-[200px]"
+                >
+                El cliente: ${nombre} 
+                pidió un préstamo de: $${prestamo} pesos
+                con un interés del ${interes}% durante ${meses} meses. 
+                Su cuota: $${cuota} pesos
+                </textarea>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </body>
     </html>
     
